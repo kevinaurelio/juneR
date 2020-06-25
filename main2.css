@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gotu&display=swap');
+
+*{
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    font-weight: lighter;
+}
+
+body{
+    min-height: 100vh;
+    margin-bottom: 100px;
+    clear: both;
+}
+
+body a:hover, body a {
+    text-decoration: none;
+    color: white;
+}
+
+/*NAV BAR*/
+.navbar{
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 997;
+    background-color: #000;
+    font-size: 1.4rem;
+    transition: all .1s ease;
+}
+
+.navbar .navbar-brand {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.navbar .submenu {
+    font-size: .8em;
+    font-weight: lighter;
+    border-bottom: solid 1px white ;
+    overflow: hidden;
+}
+
+.navbar .submenu a i{
+    transition: all ease 250ms ;
+}
+
+.navbar .submenu a i:hover {
+    transform: scale(1.5);
+    transform-origin: center;
+}
+
+.navbar li{
+    position: relative;
+}
+
+.navbar li a::before {
+    content: '';
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 0;    
+    transition: all 200ms ease-in;
+}
+
+.navbar li:hover a::before {
+    height: 5px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a img{
+    width: 50px;
+}
+
+.navscroll{
+    background-color: black;
+}
+
+@media (max-width: 992px){
+
+    .headsection {
+        top: 70px;
+    }
+
+    .navbar .container {
+        min-width: 100%;
+    }
+     
+    .navbar {
+        position: relative;
+        top: 0;
+        width: 100%;
+        background-color: #000;
+    }
+    
+    .navbar .navbar-collapse {
+        width: 100%;
+    }
+
+    .navbar .navbar-collapse .navbar-nav{
+        position: relative;
+        background-color: grey;
+        width: 100%;
+    }
+
+    .socialsm .nav-item {
+        width: 100%;
+    }
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/foto2.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/*Practices*/
+.practices{
+    position: relative;
+    background-image: url(../img/black.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.practices .overlay{
+    padding: 100px 0;
+    background-color: rgba(55, 55, 56, 0.9);
+    height: 100%;
+}
+
+.practices .overlay .container .tab{
+    border: 1px solid white;
+}
+
+.sectionone {
+    background-color: rgb(50, 51, 51);
+}

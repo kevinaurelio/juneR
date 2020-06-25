@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gotu&display=swap');
+
+*{
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    font-weight: lighter;
+}
+
+body{
+    min-height: 100vh;
+    margin-bottom: 100px;
+    clear: both;
+}
+
+body a:hover, body a {
+    text-decoration: none;
+    color: white;
+}
+
+.headsection {
+    position: relative;
+    top: 150px;
+}
+
+
+/*NAV BAR*/
+.navbar{
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 997;
+    background-color: transparent;
+    color: white;
+    font-size: 1.4rem;
+    transition: all .1s ease;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+}
+ 
+.navbar .submenu {
+    font-size: .8em;
+    font-weight: lighter;
+    border-bottom: solid 1px white ;
+    overflow: hidden;
+}
+
+.navbar li{
+    position: relative;
+}
+
+.navbar li a::before {
+    content: '';
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 0;    
+    transition: all 200ms ease-in;
+}
+
+.navbar li:hover a::before {
+    height: 5px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a img{
+    width: 50px;
+}
+
+.navscroll{
+    background-color: black;
+}
+
+@media (max-width: 992px){
+    .headsection {
+        top: 70px;
+    }
+
+    .navbar .container {
+        min-width: 100%;
+    }
+     
+    .navbar {
+        position: relative;
+        top: 0;
+        width: 100%;
+        background-color: #000;
+    }
+    
+    .navbar .navbar-collapse {
+        width: 100%;
+    }
+
+    .navbar .navbar-collapse .navbar-nav{
+        position: relative;
+        background-color: grey;
+        width: inherit;
+    }
+
+    .socialsm .nav-item {
+        width: 100%;
+    }
+}
+
+
+/*HEADER-CAROUSEL*/
+
+#carouselmain{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    overflow: hidden;
+}
+
+#carouselmain .carouselinner { 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.9);/*la altura debe ser proporcional a la altura de las fotos individuales para no deformarlas*/
+}
+
+#carouselmain .carouselinner .carouselitem{
+    width: 100%;
+    height: 100%;
+}
+
+#contact0{
+    position: relative;
+}
+
+@media (max-width: 992px){
+    #carouselmain{
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    #carouselmain .carouselinner { 
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.9);/*la altura debe ser proporcional a la altura de las fotos individuales para no deformarlas*/
+    }
+    
+    #carouselmain .carouselinner .carouselitem{
+        width: 100%;
+        height: 100%;
+    }
+    
+}
+
+/* Content3 Experience Section*/
+.content3{
+    background-image: url(../img/city1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content3 .overlay{
+
+    height: 100%;
+    background-color: rgba(55, 55, 56, 0.9);
+   
+}
+
+
+/*carousel products*/
+.carousel-main {
+    position: relative;
+}
+
+.carbtn { 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, .6);
+    border: none;
+    height: 40px;
+    width: 40px;
+    z-index: 888;
+}
+
+#prevbtnp { 
+    left: 0;
+}
+
+#nextbtnp { 
+    right: 0;
+}
+
+.carousel-main .carousel-cont {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.carousel-main .carousel-cont .carousel-img img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+    transition: all .1s ease-in-out ;
+}
+
+/*end carousel products*/
+ 
+/*title of each page over the header*/
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-100%) translateY(-50%);        
+    width: 40%;
+}
+
+.title .overlayt {
+    background-color: rgba(0, 0, 0, .6); 
+    position: relative;
+}
+
+.title h1, .title h4 {
+    color: white;  
+}
+
+.title h1 {
+    text-transform: uppercase;
+    position: relative;
+    font-size: 3em;
+    color: white;
+    letter-spacing: .2em;
+}
+
+.title h1::before { 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 5px;
+    background-color: #fff;    
+}
+
+/*Products-Gallery*/
+
+#prod1 .gallery {
+    margin-bottom: 200px; /*Se separa del footer*/
+}
+
+#prod1 .gallery .pics .eachpic:hover{
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 10px;
+}
+
+/* NEWS */
+.allnews {
+    margin-bottom: 200px;
+}
+
+.newsrows .row {
+    border: 1px solid gray ;
+}
+
+.newsrows .row img {
+    display: block;
+    width: 100%;
+    height:auto;
+}
+
+/*Pop Up Products*/
+
+.overlayb{
+    background-color: rgba(0, 0, 0, .6);
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    transition: all .3s ease-in;
+}
+
+.overlayb.active{ /* Toogle para que aparezca el pop up al hacer click */
+    visibility: visible;
+} 
+
+.overlayb .popup{
+    display: flex;
+    flex-wrap: nowrap;
+    box-shadow: 5px #ffffff;
+    border-radius: 3px;
+    transition: all .2s ease-in;
+}
+
+.closepop{
+    position: absolute;
+    top: 0;right: 0;
+}
+
+/**/
+
+/* Contact */
+#contact1 .formcontact, #contact1 .contactus{
+    margin-bottom: 200px;
+}
+
+#contact1 .icon {
+    padding: 10px 10px;
+}
+
+#contact1 .text { 
+    width: 100%;
+    padding: 0 10px;
+}
+
+@media (max-width: 992px) {
+    .formcontact {
+        margin-top: 30px;
+    }
+}
+
+
+#prod1 {
+    position: relative;
+  }
+
+
+/* backtop */
+
+.backtop {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 999;
+}
+
+/*foot*/
+
+footer {
+    position: relative;
+    bottom: 0;
+  }
+
+
+footer li{
+    list-style: none;
+}
+
+footer a img {
+    width: 100px;
+ }
